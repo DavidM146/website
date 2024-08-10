@@ -4,7 +4,7 @@ import sqlite3
 app = Flask(__name__)
 
 # Define the path to the database
-db_path = "/Users/davidsmacbook/Desktop/Programming_Projects/306_social_hosts/website/static/social_hosts.db"
+db_path = "static/social_hosts.db"
 
 @app.route("/")
 def home():
