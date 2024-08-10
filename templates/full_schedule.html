@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Reimert 306 2024-2025 Social Hosting
+{% endblock %}
+
+{% block body %}
+    <h1>Find the Social Hosts for a Particular Day</h1>
+    <form action="{{ url_for('full_schedule') }}" method="post">
+        <label for="date">Choose a Date:</label>
+        <input type="date" name="date" id="date">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <br>
+    {% if not date %}
+        <h2 class="centered">{{ error }}</h2>
+    {% endif %}
+    {% if schedule %}
+        <h2 class="centered">The social hosts for {{ date }}</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Over</th>
+                        <th>Unders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in schedule %}
+                        <tr>
+                            <td>{{ entry[0] }}</td>
+                            <td>{{ entry[1] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>306 does not plan on needing social hosts for this date</p>
+    {% endif %}
+{% endblock %}

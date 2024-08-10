@@ -1,0 +1,130 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+button {
+    background-color: maroon;
+    color: gold;
+    border: 2px solid gold;
+}
+
+a {
+    color: gold
+}
+
+header {
+    text-align: left;
+    background-color: maroon;
+    color: gold;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 750;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.25rem;
+    color: #000000;
+    font-weight: 500;
+}
+
+p {
+    text-align: left;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+h1, h2, p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.header_title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: gold
+}
+
+.centered {
+    text-align: center;
+}
+
+.left_center {
+    padding-left: 25%;
+    text-align: left;
+}
+
+.right_center {
+    padding-right: 25%;
+    text-align: right;
+}
+
+ul {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+[data-underline] {
+    text-decoration: underline;
+}
+
+.flex-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.column {
+    border: none;
+}
+
+/* Center the table-wrapper */
+.table-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+}
+
+/* Make sure the table is displayed correctly */
+.table-wrapper table {
+    border-collapse: collapse; /* Collapse table borders */
+    width: auto; /* Adjust to fit content */
+    max-width: 100%; /* Prevent overflow */
+    margin: 0 auto; /* Center table horizontally within wrapper */
+}
+
+/* Style table headers and cells */
+.table-wrapper th, .table-wrapper td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap; /* Prevent table cells from wrapping */
+}
+
+/* Optional: underline for headers */
+.table-wrapper th {
+    text-decoration: underline;
+}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Reimert 306 2024-2025 Social Hosting
+{% endblock %}
+
+{% block body %}
+    <h1>Find Your Scheduled Dates for the Year</h1>
+    <p class="centered">Please ensure your name is spelled correctly</p>
+    <br>
+    <form action="{{ url_for('your_schedule') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <br>
+    {% if not name %}
+        <p class="centered">{{ error }}</p>
+    {% endif %}
+    {% if schedule %}
+        <h2 class="centered">The social host schedule for {{ name }}</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Over</th>
+                        <th>Unders</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in schedule %}
+                        <tr>
+                            <td>{{ entry[0] }}</td>
+                            <td>{{ entry[1] }}</td>
+                            <td>{{ entry[2] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>No scheduled social host dates found, make sure you have entered a valid name</p>
+    {% endif %}
+{% endblock %}
