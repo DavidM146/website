@@ -25,6 +25,11 @@ header {
     font-size: 1rem;
 }
 
+.centered img {
+    max-width: 100%;
+    height: auto;
+}
+
 h1 {
     text-align: center;
     font-size: 1.5rem;
@@ -103,6 +108,7 @@ ul {
 
 /* Center the table-wrapper */
 .table-wrapper {
+    overflow-x: auto;
     display: flex;
     justify-content: center; /* Center horizontally */
     padding: 20px;
