@@ -16,6 +16,14 @@ button {
     padding: 8px 16px;
 }
 
+.btn btn-primary button {
+    background-color: lightskyblue;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 6px 12px;
+}
+
 a {
     color: gold
 }
