@@ -16,7 +16,7 @@ button {
     padding: 8px 16px;
 }
 
-.btn btn-primary button {
+button[type="submit"] {
     background-color: lightskyblue;
     color: white;
     border: none;
