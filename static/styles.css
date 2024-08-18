@@ -35,6 +35,13 @@ header {
     font-size: 1rem;
 }
 
+footer {
+    text-align: left;
+    background-color: maroon;
+    color: gold;
+    font-size: 1rem;
+}
+
 .centered img {
     max-width: 100%;
     height: auto;
